@@ -1,0 +1,23 @@
+[project]
+name = "llm-output-guardrail"
+version = "0.1.0"
+description = "Detect and redact PII/secret leakage in LLM-generated output."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Kaan Turan" }]
+dependencies = []
+
+[project.scripts]
+llm-output-guardrail = "llm_output_guardrail:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["llm_output_guardrail"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
